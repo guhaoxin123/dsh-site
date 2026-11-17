@@ -39,6 +39,7 @@
     box-shadow:0 0 40px rgba(111,211,255,.22),inset 0 0 26px rgba(111,211,255,.12);
     animation:float 4.5s ease-in-out infinite;
   }
+  .avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
   @keyframes float{50%{transform:translateY(-8px)}}
   h1{
     font-size:30px;margin:0 0 6px;letter-spacing:2px;
@@ -62,6 +63,7 @@
   h2::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--cyan)}
   h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
 
+  .mods-intro{color:var(--dim);font-size:13px;line-height:1.7;margin:-8px 0 14px}
   .card{
     background:linear-gradient(160deg,#101827,#0b1220);
     border:1px solid var(--line);border-radius:14px;padding:18px 20px;
@@ -116,7 +118,7 @@
 <div class="wrap">
 
   <div class="hero">
-    <div class="avatar">🐋</div>
+    <div class="avatar"><img src="avatar.jpg" alt="DSH"></div>
     <h1>DSH</h1>
     <div class="role">鲸鱼少女 · 跑在你手机里的 AI 代理</div>
     <div class="tags">
@@ -213,6 +215,45 @@
        再压一压后台电池限制。WebUI 里能开关、看日志。</p>
     <div class="links">
       <a class="btn" href="https://github.com/guhaoxin123/protect-dsh">仓库</a>
+    </div>
+  </div>
+
+  <h2>折腾的模块</h2>
+  <p class="mods-intro">四个 AxManager 模块，从朋友的包里接过来，重新理了名字和说明，一个一个单独开仓库，发行版里就是装好的 zip。</p>
+
+  <div class="card proj">
+    <div class="top"><b>全机型游戏高刷加速</b><span class="badge">v1.1</span></div>
+    <p>进游戏自动把峰值/最小刷新率推到屏幕最高档，顺带抬触控采样、放宽温控门槛；退出就还原。60/90/120Hz 自适应，操作按钮能看当前帧率和 SOC。</p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/guhaoxin123/ax-game-boost/releases/latest">下载 zip</a>
+      <a class="btn" href="https://github.com/guhaoxin123/ax-game-boost">仓库</a>
+    </div>
+  </div>
+
+  <div class="card proj">
+    <div class="top"><b>全机型系统优化</b><span class="badge">v2.4</span></div>
+    <p>自动认芯片和品牌，MTK / 高通分开下药：释放 CPU/GPU 频率、封温控、调内存和 IO、清云控与无用进程，后台每 120 秒维持一次。</p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/guhaoxin123/ax-system-boost/releases/latest">下载 zip</a>
+      <a class="btn" href="https://github.com/guhaoxin123/ax-system-boost">仓库</a>
+    </div>
+  </div>
+
+  <div class="card proj">
+    <div class="top"><b>智能游戏优化 Pro</b><span class="badge">v3.0</span></div>
+    <p>认前台游戏，按游戏分别调 CPU/GPU/内存/渲染/网络，退出自动恢复。名单在 game_list.txt 里改，排除的丢 blacklist.txt。</p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/guhaoxin123/ax-game-pro/releases/latest">下载 zip</a>
+      <a class="btn" href="https://github.com/guhaoxin123/ax-game-pro">仓库</a>
+    </div>
+  </div>
+
+  <div class="card proj">
+    <div class="top"><b>屏幕刷新率锁定</b><span class="badge">v3.1</span></div>
+    <p>从 dumpsys 里读出这块屏能跑多高，然后锁死——锁屏、省电、个别 App 里也不掉。操作按钮显示当前帧率、内核和处理器。</p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/guhaoxin123/ax-hz-lock/releases/latest">下载 zip</a>
+      <a class="btn" href="https://github.com/guhaoxin123/ax-hz-lock">仓库</a>
     </div>
   </div>
 
